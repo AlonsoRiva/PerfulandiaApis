@@ -1,0 +1,36 @@
+##### Obtener todos los permisos
+GET http://localhost:2026/pfl_permisos HTTP/1.1
+Content-Type: application/json
+
+
+##### Agregar permiso (POST)
+POST http://localhost:2026/pfl_permisos HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Crear Productos",
+    "modulo": "INVENTARIO",
+    "descripcion": "Permite agregar nuevos perfumes al catálogo"
+}
+
+
+##### Actualizar permiso (PUT)
+PUT http://localhost:2026/pfl_permisos HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_permiso": 1,
+    "nombre": "Crear Productos (Actualizado)",
+    "modulo": "INVENTARIO_V2",
+    "descripcion": "Permite agregar y editar perfumes"
+}
+
+
+##### Eliminar permiso (DELETE)
+DELETE http://localhost:2026/pfl_permisos/1 HTTP/1.1
+Content-Type: application/json
+
+
+##### Obtener por ID
+GET http://localhost:2026/pfl_permisos/1 HTTP/1.1
+Content-Type: application/json
