@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@RequestMapping("/usuarios")
+@RequestMapping("/pfl_usuarios")
 @RestController
 public class UsuarioController {
 
@@ -43,14 +43,14 @@ public class UsuarioController {
     }
     
     @PutMapping("")
-    public Usuario actualizMarca(@RequestBody ActualizarUsuario nueva) {
+    public Usuario actualizarUsuario(@RequestBody ActualizarUsuario nueva) {
         
         return usuarioService.actualizarUsuario(nueva);
     }
 
     @DeleteMapping("/{idUsuario}")
-    public String eliminarMarca(@PathVariable int idMarca){
-        return usuarioService.eliminarUsuario(idMarca);
+    public String eliminarUsuario(@PathVariable int idUsuario){
+        return usuarioService.eliminarUsuario(idUsuario);
 
     }
 }
