@@ -14,5 +14,7 @@ public class ActualizarUsuario {
     private String apellido;
     @NotBlank
     private String email;
+    @NotBlank
+    private int id_permiso;
     
 }

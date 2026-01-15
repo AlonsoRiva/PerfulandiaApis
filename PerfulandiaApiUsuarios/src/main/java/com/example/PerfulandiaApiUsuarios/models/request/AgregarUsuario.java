@@ -13,5 +13,7 @@ public class AgregarUsuario {
     private String email;
     @NotBlank
     private String password;
+    @NotBlank
+    private int id_permiso;
     
 }
