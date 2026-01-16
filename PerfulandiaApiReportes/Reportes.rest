@@ -1,0 +1,22 @@
+### Generar Reporte de Ventas
+POST http://localhost:2029/pfl_reportes/generar
+Content-Type: application/json
+
+{
+  "tipoReporte": "VENTAS",
+  "idSucursal": 1,
+  "periodo": "MENSUAL"
+}
+
+### Generar Reporte de Inventario
+POST http://localhost:2029/pfl_reportes/generar
+Content-Type: application/json
+
+{
+  "tipoReporte": "INVENTARIO",
+  "idSucursal": 1,
+  "periodo": "ACTUAL"
+}
+
+### Ver todos los reportes generados
+GET http://localhost:2029/pfl_reportes
