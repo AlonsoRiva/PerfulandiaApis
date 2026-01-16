@@ -27,7 +27,6 @@ public class SucursalService {
     }
 
     public Sucursal crear(AgregarSucursal request) {
-        // Validación eliminada por solicitud del usuario
         
         Sucursal s = new Sucursal();
         s.setNombre(request.getNombre());

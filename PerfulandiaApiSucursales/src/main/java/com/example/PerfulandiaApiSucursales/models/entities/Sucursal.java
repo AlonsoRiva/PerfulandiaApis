@@ -19,11 +19,11 @@ public class Sucursal {
     private String direccion; 
     
     @Column(name = "horario_atencion", nullable = false)
-    private String horarioAtencion; // Ej: "Lun-Vie 09:00 a 18:00"
+    private String horarioAtencion; 
 
     @Column(name = "personal_asignado", nullable = false)
-    private String personalAsignado; // Ej: "Jefe: Juan Perez, Vendedores: 3"
+    private String personalAsignado; 
 
     @Column(columnDefinition = "TEXT") 
-    private String politicas; // Ej: "Aforo máx 10 personas."
+    private String politicas; 
 }

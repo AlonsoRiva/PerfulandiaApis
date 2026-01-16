@@ -11,7 +11,6 @@ public class AgregarSucursal {
     @NotBlank(message = "La dirección es obligatoria")
     private String direccion;
 
-    // Campos de gestión
     @NotBlank(message = "El horario es obligatorio")
     private String horarioAtencion;
 
