@@ -24,6 +24,6 @@ public class Sucursal {
     @Column(name = "personal_asignado", nullable = false)
     private String personalAsignado; 
 
-    @Column(columnDefinition = "TEXT") 
+    @Column(nullable = false) 
     private String politicas; 
 }
