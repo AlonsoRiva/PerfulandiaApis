@@ -1,0 +1,24 @@
+
+
+### 1. Ver historial de respaldos
+GET http://localhost:2029/respaldos HTTP/1.1
+Content-Type: application/json
+
+### 2. Generar un respaldo (BACKUP)
+POST http://localhost:2029/respaldos HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombreArchivo": "backup_completo_v1.sql",
+    "fecha": "15-01-2026 18:00",
+    "tipo": "AUTOMATICO"
+}
+
+### 3 Esto simula que el sistema restaura datos desde un respaldo existente.
+POST http://localhost:2029/respaldos/restaurar/1 HTTP/1.1
+Content-Type: application/json
+
+
+### 4. Eliminar un respaldo antiguo
+DELETE http://localhost:2029/respaldos/2 HTTP/1.1
+Content-Type: application/json
