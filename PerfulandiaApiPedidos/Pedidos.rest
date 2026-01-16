@@ -1,0 +1,19 @@
+### 1. Sucursal solicita productos (Se crea como PENDIENTE)
+POST http://localhost:2030/pfl_pedidos
+Content-Type: application/json
+
+{
+  "idSucursal": 1,
+  "detalleProductos": "Solicito 50 unidades de Perfume Channel N5 y 20 de Sauvage"
+}
+
+### 2. Gerente revisa los pendientes
+GET http://localhost:2030/pfl_pedidos/pendientes
+
+### 3. Gerente AUTORIZA el pedido (Usando la ID que te devolvió el paso 1)
+PUT http://localhost:2030/pfl_pedidos/1/autorizar
+Content-Type: application/json
+
+{
+  "nuevoEstado": "AUTORIZADO"
+}
