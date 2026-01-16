@@ -10,7 +10,7 @@ public class WebClientConfig {
     @Bean
     public WebClient sucursalWebClient() {
         return WebClient.builder()
-                .baseUrl("http://localhost:2023/sucursales")
+                .baseUrl("http://localhost:2028/sucursales")
                 .build();
     }
 }

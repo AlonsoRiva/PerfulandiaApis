@@ -1,0 +1,13 @@
+### Registrar un nuevo estado de pedido
+# El sistema buscará el nombre del producto 1 automáticamente
+POST http://localhost:2029/estado_pedidos HTTP/1.1
+Content-Type: application/json
+
+{
+    "pedidoId": 1001,
+    "idProducto": 1,
+    "estado": "EN_BODEGA"
+}
+
+### Ver historial con nombres de productos
+GET http://localhost:2029/estado_pedidos HTTP/1.1
