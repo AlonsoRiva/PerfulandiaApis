@@ -10,14 +10,14 @@ public class WebClientConfig {
     @Bean
     public WebClient inventarioWebClient() {
         return WebClient.builder()
-                .baseUrl("http://localhost:2031/inventario")
+                .baseUrl("http://localhost:2005/inventario")
                 .build();
     }
 
     @Bean
     public WebClient enviosWebClient() {
         return WebClient.builder()
-                .baseUrl("http://localhost:2030/envios")
+                .baseUrl("http://localhost:2013/envios")
                 .build();
     }
 }

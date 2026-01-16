@@ -9,7 +9,7 @@ public class WebClientConfig {
 
     @Bean
     public WebClient permisosWebClient(){
-        return WebClient.builder().baseUrl("http://127.0.0.1:2026").build();
+        return WebClient.builder().baseUrl("http://127.0.0.1:2002").build();
 
     }
 }

@@ -1,5 +1,5 @@
 ### Generar Reporte de Ventas
-POST http://localhost:2029/pfl_reportes/generar
+POST http://localhost:2006/pfl_reportes/generar
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
 }
 
 ### Generar Reporte de Inventario
-POST http://localhost:2029/pfl_reportes/generar
+POST http://localhost:2006/pfl_reportes/generar
 Content-Type: application/json
 
 {
@@ -19,4 +19,4 @@ Content-Type: application/json
 }
 
 ### Ver todos los reportes generados
-GET http://localhost:2029/pfl_reportes
+GET http://localhost:2006/pfl_reportes

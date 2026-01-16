@@ -1,8 +1,8 @@
 ### Obtener todas
-GET http://localhost:2028/sucursales
+GET http://localhost:2007/sucursales
 
 ### Crear Sucursal
-POST http://localhost:2028/sucursales
+POST http://localhost:2007/sucursales
 Content-Type: application/json
 
 {

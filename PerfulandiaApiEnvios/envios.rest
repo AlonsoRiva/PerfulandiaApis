@@ -1,5 +1,5 @@
-### 1. Crear Envío a Sucursal 
-POST http://localhost:2031/envios HTTP/1.1
+###### 1. Hacer un envio a la bodega
+POST http://localhost:2013/envios HTTP/1.1
 Content-Type: application/json
 
 {
@@ -10,21 +10,10 @@ Content-Type: application/json
 
 
 
-### 2. Crear Envío a Cliente
-POST http://localhost:2031/envios HTTP/1.1
-Content-Type: application/json
-
-{
-    "origen": "Bodega Principal",
-    "direccionCliente": "Calle Falsa 123",
-    "descripcion": "Pack Regalo Individual"
-}
-
-
 
 ### 3. Ver todos los envíos
-GET http://localhost:2031/envios HTTP/1.1
+GET http://localhost:2013/envios HTTP/1.1
 
 
 ### 4. Cambiar estado a EN_CAMINO
-PUT http://localhost:2031/envios/1/estado?estado=EN_CAMINO HTTP/1.1
+PUT http://localhost:2013/envios/1/estado?estado=EN_CAMINO HTTP/1.1
