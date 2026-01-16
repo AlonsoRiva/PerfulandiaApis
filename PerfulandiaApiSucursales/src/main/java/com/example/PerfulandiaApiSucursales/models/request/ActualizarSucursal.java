@@ -1,13 +1,26 @@
 package com.example.PerfulandiaApiSucursales.models.request;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
 public class ActualizarSucursal {
+    @Min(1)
     private int id_sucursal;
+
+    @NotBlank
     private String nombre;
+
+    @NotBlank
     private String direccion;
-    private String horarioApertura;
+
+    @NotBlank
+    private String horarioAtencion;
+
+    @NotBlank
     private String personalAsignado;
-    private String politicasLocales;
+
+    @NotBlank
+    private String politicas;
 }

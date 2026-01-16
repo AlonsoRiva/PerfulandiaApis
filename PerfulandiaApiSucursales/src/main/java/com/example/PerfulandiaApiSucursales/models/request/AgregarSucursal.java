@@ -5,16 +5,19 @@ import lombok.Data;
 
 @Data
 public class AgregarSucursal {
-    @NotBlank
+    @NotBlank(message = "El nombre es obligatorio")
     private String nombre;
-    
-    @NotBlank
+
+    @NotBlank(message = "La dirección es obligatoria")
     private String direccion;
-    
-    @NotBlank
-    private String horarioApertura;
-    
+
+    // Campos de gestión
+    @NotBlank(message = "El horario es obligatorio")
+    private String horarioAtencion;
+
+    @NotBlank(message = "Debe indicar el personal asignado")
     private String personalAsignado;
-    
-    private String politicasLocales;
+
+    @NotBlank(message = "Las políticas son obligatorias")
+    private String politicas;
 }
