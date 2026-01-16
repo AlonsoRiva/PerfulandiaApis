@@ -1,0 +1,14 @@
+### Obtener todas
+GET http://localhost:2028/pfl_sucursales
+
+### Crear Sucursal
+POST http://localhost:2028/pfl_sucursales
+Content-Type: application/json
+
+{
+  "nombre": "Sucursal Centro",
+  "direccion": "Av. Principal 123",
+  "horarioApertura": "09:00 - 19:00",
+  "personalAsignado": "Juan (Jefe), Ana (Vendedora)",
+  "politicasLocales": "Uso obligatorio de uniforme"
+}

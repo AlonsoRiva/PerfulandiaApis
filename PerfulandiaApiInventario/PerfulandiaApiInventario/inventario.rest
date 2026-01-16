@@ -9,7 +9,7 @@ POST http://localhost:2027/inventario HTTP/1.1
 Content-Type: application/json
 
 {
-    "nombre": "Polo Blue",
+    "nombre": "Polo xxx",
     "genero": "Hombre",
     "precio": 70000,
     "stock": 20
@@ -19,7 +19,7 @@ Content-Type: application/json
 
 ### 3. Actualizar datos de un producto (PUT)
 # Usamos la ID 1 (suponiendo que ya creaste uno)
-PUT http://localhost:2024/pfl_inventario/1 HTTP/1.1
+PUT http://localhost:2027/inventario/1 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -31,11 +31,11 @@ Content-Type: application/json
 
 
 ### 5. Eliminar un producto (DELETE)
-DELETE http://localhost:2024/pfl_inventario/1 HTTP/1.1
+DELETE http://localhost:2027/inventario/1 HTTP/1.1
 Content-Type: application/json
 
 ###
 
 ### 6. Obtener producto por ID
-GET http://localhost:2024/pfl_inventario/1 HTTP/1.1
+GET http://localhost:2027/inventario/11 HTTP/1.1
 Content-Type: application/json
