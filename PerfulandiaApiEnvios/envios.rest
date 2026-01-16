@@ -1,0 +1,30 @@
+### 1. Crear Envío a Sucursal 
+POST http://localhost:2031/envios HTTP/1.1
+Content-Type: application/json
+
+{
+    "origen": "Bodega Principal",
+    "idSucursalDestino": 1,
+    "descripcion": "Caja de perfumes 50 unidades"
+}
+
+
+
+### 2. Crear Envío a Cliente
+POST http://localhost:2031/envios HTTP/1.1
+Content-Type: application/json
+
+{
+    "origen": "Bodega Principal",
+    "direccionCliente": "Calle Falsa 123",
+    "descripcion": "Pack Regalo Individual"
+}
+
+
+
+### 3. Ver todos los envíos
+GET http://localhost:2031/envios HTTP/1.1
+
+
+### 4. Cambiar estado a EN_CAMINO
+PUT http://localhost:2031/envios/1/estado?estado=EN_CAMINO HTTP/1.1
