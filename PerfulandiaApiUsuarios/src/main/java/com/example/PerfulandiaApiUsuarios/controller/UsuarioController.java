@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@RequestMapping("/pfl_usuarios")
+@RequestMapping("/usuarios")
 @RestController
 public class UsuarioController {
 
