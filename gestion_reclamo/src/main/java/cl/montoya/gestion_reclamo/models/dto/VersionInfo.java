@@ -1,0 +1,4 @@
+package cl.montoya.gestion_reclamo.models.dto;
+
+public record VersionInfo(String nombreApp, String version) {
+}
