@@ -11,6 +11,8 @@ import com.example.PerfulandiaApiSucursales.models.request.ActualizarSucursal;
 import com.example.PerfulandiaApiSucursales.models.request.AgregarSucursal;
 import com.example.PerfulandiaApiSucursales.repositories.SucursalRepositorio;
 
+
+
 @Service
 public class SucursalService {
 
@@ -56,5 +58,10 @@ public class SucursalService {
         }
         repositorio.deleteById(id);
         return "Sucursal eliminada correctamente";
+    }
+
+    public Sucursal agregar(AgregarSucursal nueva) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'agregar'");
     }
 }
