@@ -1,5 +1,7 @@
 package com.example.PerfulandiaApiSucursales.models.entities;
 
+import com.example.PerfulandiaApiSucursales.models.request.AgregarSucursal;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -22,8 +24,18 @@ public class Sucursal {
     private String horarioAtencion; 
 
     @Column(name = "personal_asignado", nullable = false)
-    private String personalAsignado; 
+    private int personalAsignado; 
 
     @Column(nullable = false) 
-    private String politicas; 
+    private String politicas;
+
+    public static Sucursal crearSucursal(AgregarSucursal request) {
+        Sucursal sucursal = new Sucursal();
+        sucursal.setNombre(request.getNombre());
+        sucursal.setDireccion(request.getDireccion());
+        sucursal.setHorarioAtencion(request.getHorarioAtencion());
+        sucursal.setPersonalAsignado(request.getPersonalAsignado());
+        sucursal.setPoliticas(request.getPoliticas());
+        return sucursal;
+    } 
 }
