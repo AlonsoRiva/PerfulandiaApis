@@ -18,8 +18,7 @@ public class ActualizarSucursal {
     @NotBlank
     private String horarioAtencion;
 
-    @NotBlank
-    private String personalAsignado;
+    private int personalAsignado;
 
     @NotBlank
     private String politicas;

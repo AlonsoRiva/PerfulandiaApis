@@ -10,35 +10,36 @@ import com.example.PerfulandiaApiSucursales.models.request.ActualizarSucursal;
 import com.example.PerfulandiaApiSucursales.models.request.AgregarSucursal;
 import com.example.PerfulandiaApiSucursales.service.SucursalService;
 
+
 @RestController
-@RequestMapping("/sucursales")
+@RequestMapping("/pfl_sucursales")
 public class SucursalController {
 
     @Autowired
-    private SucursalService service;
+    private SucursalService sucursalService;
 
     @GetMapping("")
-    public List<Sucursal> listar() {
-        return service.listarTodas();
+    public List<Sucursal> obtenerTodas() {
+        return sucursalService.listarTodas();
     }
 
     @GetMapping("/{id}")
-    public Sucursal obtener(@PathVariable int id) {
-        return service.obtenerPorId(id);
+    public Sucursal obtenerPorId(@PathVariable int id) {
+        return sucursalService.obtenerPorId(id);
     }
 
     @PostMapping("")
-    public Sucursal crear(@Valid @RequestBody AgregarSucursal sucursal) {
-        return service.crear(sucursal);
+    public Sucursal crear(@Valid @RequestBody AgregarSucursal nueva) {
+        return sucursalService.agregar(nueva);
     }
 
     @PutMapping("")
-    public Sucursal actualizar(@Valid @RequestBody ActualizarSucursal sucursal) {
-        return service.actualizar(sucursal);
+    public Sucursal actualizar(@RequestBody ActualizarSucursal actualizacion) {
+        return sucursalService.actualizar(actualizacion);
     }
 
     @DeleteMapping("/{id}")
     public String eliminar(@PathVariable int id) {
-        return service.eliminar(id);
+        return sucursalService.eliminar(id);
     }
 }

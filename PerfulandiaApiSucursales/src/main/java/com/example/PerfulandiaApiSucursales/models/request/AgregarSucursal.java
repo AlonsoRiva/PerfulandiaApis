@@ -14,8 +14,7 @@ public class AgregarSucursal {
     @NotBlank(message = "El horario es obligatorio")
     private String horarioAtencion;
 
-    @NotBlank(message = "Debe indicar el personal asignado")
-    private String personalAsignado;
+    private int personalAsignado;
 
     @NotBlank(message = "Las políticas son obligatorias")
     private String politicas;

@@ -65,4 +65,21 @@ public class ReporteService {
         reporteRepositorio.deleteById(id);
         return "Reporte eliminado del historial.";
     }
+
+    public String generarContenido(String string) {
+        if (string == null) {
+            return "Reporte general generado";
+        }
+
+        switch (string.toUpperCase()) {
+            case "VENTAS":
+                return "Reporte de Ventas generado";
+            case "INVENTARIO":
+                return "Reporte de Inventario generado";
+            case "RENDIMIENTO":
+                return "Reporte de Rendimiento generado";
+            default:
+                return "Reporte general generado";
+        }
+    }
 }
