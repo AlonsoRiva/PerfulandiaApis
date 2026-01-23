@@ -1,5 +1,8 @@
 package com.example.PerfulandiaApiEstadoDePedido.models.entities;
 
+
+import org.springframework.hateoas.RepresentationModel;
+
 import java.time.LocalDateTime;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -7,8 +10,7 @@ import lombok.Data;
 @Entity
 @Data
 @Table(name = "estado_pedidos")
-public class EstadoPedido {
-
+public class EstadoPedido extends RepresentationModel<EstadoPedido> { 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id; // Cambiado de id_envio a id para evitar conflictos

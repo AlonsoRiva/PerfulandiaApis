@@ -29,7 +29,11 @@ public class EstadoPedidoService {
     public List<EstadoPedido> obtenerTodos() {
         return repositorio.findAll();
     }
-
+    public EstadoPedido obtenerPorId(int id) {
+        return repositorio.findById(id)
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Registro de estado no encontrado"));
+    }
+    
     public EstadoPedido registrarEstado(EstadoPedido nuevo) {
         // 1. CONEXIÓN CON INVENTARIO: Saber qué producto es
         try {
