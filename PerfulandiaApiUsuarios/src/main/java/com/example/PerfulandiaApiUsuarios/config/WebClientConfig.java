@@ -9,7 +9,7 @@ public class WebClientConfig {
 
     @Bean
     public WebClient permisosWebClient(){
-        return WebClient.builder().baseUrl("http://127.0.0.1:2002").build();
+        return WebClient.builder().baseUrl("http://gestiondepermisos.us-east-1.elasticbeanstalk.com/").build();
 
     }
 }
