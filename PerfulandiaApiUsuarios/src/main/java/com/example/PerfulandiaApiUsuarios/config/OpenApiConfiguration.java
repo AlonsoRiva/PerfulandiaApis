@@ -14,7 +14,7 @@ public class OpenApiConfiguration {
         return new OpenAPI()
         .info(new Info()
         .title("Perfulandia - API Usuarios")
-        .version("1.0")
+        .version("1.1")
         .description("Servicio para la gestión de usuarios y autenticación de Perfulandia")
         .contact(new Contact()
             .name("Los Crocodilitos")));
