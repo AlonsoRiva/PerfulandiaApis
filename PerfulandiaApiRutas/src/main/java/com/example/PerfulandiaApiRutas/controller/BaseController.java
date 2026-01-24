@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class BaseController {
 
     @Value("${app.name}")
-    private String nombre;
+    private String nombreApp;
 
     @Value("${app.version}")
     private String version;
 
     @GetMapping("")
     public VersionInfo base() {
-        return new VersionInfo(nombre, version);
+        return new VersionInfo(nombreApp, version);
     }
 }
