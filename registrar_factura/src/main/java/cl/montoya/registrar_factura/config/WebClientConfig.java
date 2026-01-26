@@ -9,7 +9,7 @@ public class WebClientConfig {
 
     @Bean
     public WebClient webClient() {
-        return WebClient.builder().baseUrl("http://localhost:2034").build();
+        return WebClient.builder().baseUrl("http://registrar-venta.us-east-1.elasticbeanstalk.com").build();
     }
     
 }
