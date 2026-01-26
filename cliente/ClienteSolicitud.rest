@@ -1,0 +1,41 @@
+#### crear cliente ####
+POST http://localhost:2018/cliente HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre_cliente": "Pedro",
+    "apellido_cliente": "Gonsales",
+    "email_cliente": "pedro.gonsales@example.com",
+    "telefono_cliente": "+56912345678",
+    "direccion_cliente": "Avenida siempre viva 742, porahi",
+    "fecha_registro_cliente": "2024-06-14"
+}
+
+#### eliminar cliente ####
+DELETE http://cliente.us-east-1.elasticbeanstalk.com/1 HTTP/1.1
+Content-Type: application/json
+
+#### obtener cliente por id ####
+GET http://cliente.us-east-1.elasticbeanstalk.com/1 HTTP/1.1
+Content-Type: application/json
+
+#### ver todos los clientes ####
+GET http://cliente.us-east-1.elasticbeanstalk.com HTTP/1.1
+Content-Type: application/json
+
+#### actualizar cliente ####
+PUT http://cliente.us-east-1.elasticbeanstalk.com HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_cliente": 1,
+    "nombre_cliente": "Pedro",
+    "apellido_cliente": "Gonzalez",
+    "email_cliente": "pedro.gonzalez@example.com",
+    "telefono_cliente": "+56912345678",
+    "direccion_cliente": "Avenida nunca viva 742, poraca"
+}
+
+#### eliminar cliente ####
+DELETE http://cliente.us-east-1.elasticbeanstalk.com/1 HTTP/1.1
+Content-Type: application/json
