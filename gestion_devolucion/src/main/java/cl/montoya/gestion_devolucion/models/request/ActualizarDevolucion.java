@@ -28,6 +28,6 @@ public class ActualizarDevolucion {
     private int monto_reembolsado;
 
     @NotBlank
-    private String estado;
+    private String estado_venta;
     
 }

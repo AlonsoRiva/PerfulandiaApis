@@ -1,7 +1,5 @@
 package cl.montoya.gestion_devolucion.models.entities;
 
-import org.springframework.hateoas.RepresentationModel;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,7 +11,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "devolucion")
-public class Devolucion extends RepresentationModel<Devolucion> {
+public class Devolucion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

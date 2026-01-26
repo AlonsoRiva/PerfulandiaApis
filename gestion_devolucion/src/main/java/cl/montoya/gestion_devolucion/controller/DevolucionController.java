@@ -3,8 +3,6 @@ package cl.montoya.gestion_devolucion.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.hateoas.EntityModel;
-import org.springframework.hateoas.Link;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 
 @RequestMapping("/devolucion")
@@ -41,12 +38,8 @@ public class DevolucionController {
     }
 
     @GetMapping("/{id_devolucion}")
-    public EntityModel<Devolucion> BuscarDevolucionPorId(@PathVariable int id_devolucion) {
-        Devolucion devolucion = devolucionService.BuscarDevolucionPorId(id_devolucion);
-
-
-        Link selfLink = linkTo(methodOn(DevolucionController.class).BuscarDevolucionPorId(id_devolucion)).withSelfRel();
-        return EntityModel.of(devolucion, selfLink);
+    public Devolucion BuscarDevolucionPorId(@PathVariable int id_devolucion) {
+        return devolucionService.BuscarDevolucionPorId(id_devolucion);
     }
     
 
