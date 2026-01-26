@@ -10,7 +10,7 @@ public class WebClientConfig {
     @Bean
     public WebClient sucursalWebClient() {
         return WebClient.builder()
-                .baseUrl("http://localhost:2007/sucursales")
+                .baseUrl("http://gestiondesucursales.us-west-2.elasticbeanstalk.com/")
                 .build();
     }
 }
