@@ -43,5 +43,8 @@ public class Venta {
 
     @Column(nullable = false)
     private int monto_total;
+
+    @Column(nullable = false)
+    private String estado_venta;
     
 }

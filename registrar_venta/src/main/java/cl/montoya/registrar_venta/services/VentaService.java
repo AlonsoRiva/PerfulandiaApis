@@ -41,6 +41,7 @@ public class VentaService {
         venta.setMetodo_pago(nueva_venta.getMetodo_pago());
         venta.setFecha_venta(nueva_venta.getFecha_venta());
         venta.setMonto_total(nueva_venta.getMonto_total());
+        venta.setEstado_venta(nueva_venta.getEstado_venta());
         return ventaRepository.save(venta);
     }
 
@@ -58,6 +59,7 @@ public class VentaService {
         venta.setMetodo_pago(venta_actualizada.getMetodo_pago());
         venta.setFecha_venta(venta_actualizada.getFecha_venta());
         venta.setMonto_total(venta_actualizada.getMonto_total());
+        venta.setEstado_venta(venta_actualizada.getEstado_venta());
         return ventaRepository.save(venta);
         }
     }

@@ -32,4 +32,7 @@ public class AgregarVenta {
 
     @NotBlank
     private int monto_total;
+
+    @NotBlank
+    private String estado_venta;
 }

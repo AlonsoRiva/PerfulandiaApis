@@ -36,4 +36,7 @@ public class ActualizarVenta {
     @NotBlank
     private int monto_total;
 
+    @NotBlank
+    private String estado_venta;
+
 }
