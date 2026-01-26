@@ -28,6 +28,7 @@ public class ReclamoService {
         }
         return reclamo;
     }
+    
     public Reclamo HacerReclamo(HacerReclamo nuevo_reclamo) {
         Reclamo reclamo = new Reclamo();
         reclamo.setDescripcion_reclamo(nuevo_reclamo.getDescripcion_reclamo());
