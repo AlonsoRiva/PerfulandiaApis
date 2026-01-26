@@ -10,14 +10,14 @@ public class WebClientConfig {
     @Bean
     public WebClient inventarioWebClient() {
         return WebClient.builder()
-                .baseUrl("http://localhost:2005/inventario")
+                .baseUrl("http://inventario-env.eba-iympaunh.us-east-1.elasticbeanstalk.com/")
                 .build();
     }
 
     @Bean
     public WebClient enviosWebClient() {
         return WebClient.builder()
-                .baseUrl("http://localhost:2013/envios")
+                .baseUrl("http://gestiondeenvios.us-west-2.elasticbeanstalk.com/")
                 .build();
     }
 }
