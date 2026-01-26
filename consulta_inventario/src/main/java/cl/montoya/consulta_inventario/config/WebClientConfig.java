@@ -8,6 +8,6 @@ import org.springframework.web.reactive.function.client.WebClient;
 public class WebClientConfig {
     @Bean
     public WebClient webClient() {
-        return WebClient.builder().baseUrl("http://localhost:2005").build();
+        return WebClient.builder().baseUrl("http://inventario-env.eba-iympaunh.us-east-1.elasticbeanstalk.com").build();
     }
 }
